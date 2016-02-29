@@ -1,0 +1,3 @@
+rootProject.name = 'LayoutAnimationApp'
+
+include ':app'
