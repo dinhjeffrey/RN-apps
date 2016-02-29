@@ -12,6 +12,9 @@ import React, {
 
 class LayoutAnimationApp extends Component {
   // look up constructor, super, state, viewStyle
+  // constructor sets up an instance or "pre-requisites" to make an instance
+  // super is used to reference the base class's constructors and methods (everything in a car, in a firetruck. firetruck has extra stuff than a car, but base is a car)
+  // state is defining the pre-requisites
   constructor(){
     super();
     this.state={
@@ -27,7 +30,9 @@ class LayoutAnimationApp extends Component {
     // look up layoutAnimation
     // first paramater passed to layoutAnimation is config parameter.
     // 2nd parameter is success function (on the success function)
+    // layoutAnimation - automatically animates views ot their new position when the next layout happens
     LayoutAnimation.configureNext(LayoutAnimation.Presets.spring, callback())
+    // updating the state
     this.setState({
       viewStyle: {
         height: this.state.viewStyle.height > 250 ? 250 : 450
